@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+}
+
+/* Фон и карточки */
+#demo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    transform-origin: center;
+}
+
+/* Glassmorphism эффект для текстовых блоков */
+.details {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 400px;
+    z-index: 50;
+    color: white;
+    opacity: 0; /* Управляется через JS */
+    pointer-events: none;
+}
+
+.place-box .text {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.title-1, .title-2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.desc {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Кнопки */
+.cta {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    pointer-events: all;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.discover {
+    background: #fff;
+    color: #000;
+}
+
+.discover:hover {
+    background: #ddd;
+}
+
+.bookmark {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Навигация */
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+}
+
+.nav-links .active {
+    border-bottom: 2px solid #fff;
+}
+
+/* Пагинация и прогресс-бар */
+.pagination {
+    position: absolute;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.progress-sub-container {
+    width: 200px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.progress-sub-foreground {
+    height: 100%;
+    background: #fff;
+    width: 0%;
+}
+
+.slide-numbers {
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+}
+
+.item {
+    padding: 0 5px;
+}
+
+/* Шторка для начальной анимации */
+.cover {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+}
+
+.svg-container svg {
+    width: 24px;
+    height: 24px;
+}
